@@ -1,0 +1,23 @@
+{
+    "name":"ipaya/yii2-cron",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0.0",
+        "yiisoft/yii2": "*",
+        "mtdowling/cron-expression": "^1.2",
+        "yiisoft/yii2-bootstrap": "^2.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "iPaya\\Cron\\": "src"
+        }
+    }
+}
