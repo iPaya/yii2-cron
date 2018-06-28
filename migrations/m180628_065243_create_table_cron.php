@@ -32,6 +32,8 @@ class m180628_065243_create_table_cron extends Migration
             'command' => $this->string(1000)->notNull()->comment('Command'),
             'comment' => $this->string()->comment('Comment'),
             'enabled' => $this->integer(1)->notNull()->defaultValue(1)->comment('Enabled'),
+            'createdAt' => $this->integer(),
+            'updatedAt' => $this->integer(),
         ], $this->getTableOptions() . ' comment "Cron Table"');
     }
 
