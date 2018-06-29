@@ -1,5 +1,6 @@
 {
     "name":"ipaya/yii2-cron",
+    "description": "iPaya 异步任务之 Yii 框架管理模块及 API 模块。",
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "minimum-stability": "stable",
