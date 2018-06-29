@@ -6,7 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = '计划任务';
+$this->title = '任务管理';
+$this->params['breadcrumbs'][] = ['label' => '计划任务', 'url' => ['default/index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="cron-index">
@@ -14,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('添加计划任务', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('添加任务', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

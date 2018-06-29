@@ -5,7 +5,13 @@ namespace iPaya\Cron\Modules\Admin;
 
 
 use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 
+/**
+ * Class Controller
+ * @package iPaya\Cron\Modules\Admin
+ * @property Module $module
+ */
 class Controller extends \yii\web\Controller
 {
     /**
@@ -19,8 +25,20 @@ class Controller extends \yii\web\Controller
                 'rules' => [
                     ['allow' => true, 'roles' => ['@']]
                 ]
+            ],
+            'verbs' => [
+                'class' => VerbFilter::class,
+                'actions' => $this->verbs(),
             ]
         ];
+    }
+
+    /**
+     * @return array
+     */
+    public function verbs()
+    {
+        return [];
     }
 
 }

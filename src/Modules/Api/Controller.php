@@ -7,6 +7,11 @@ namespace iPaya\Cron\Modules\Api;
 use yii\filters\auth\HttpBasicAuth;
 use yii\web\Response;
 
+/**
+ * Class Controller
+ * @package iPaya\Cron\Modules\Api
+ * @property Module $module
+ */
 class Controller extends \yii\rest\Controller
 {
     public $enableCsrfValidation = false;

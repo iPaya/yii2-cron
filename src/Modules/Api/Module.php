@@ -4,10 +4,11 @@
 namespace iPaya\Cron\Modules\Api;
 
 
+use iPaya\Cron\BaseModule;
 use yii\filters\auth\HttpBasicAuth;
 use yii\web\JsonParser;
 
-class Module extends \yii\base\Module
+class Module extends BaseModule
 {
     public $controllerNamespace = 'iPaya\Cron\Modules\Api\Controllers';
     /**

@@ -20,8 +20,9 @@ class CronController extends Controller
      */
     public function actionVersion()
     {
+        $version = Cron::find()->enabled()->max('updatedAt');
         return [
-            'version' => Cron::find()->enabled()->max('updatedAt'),
+            'version' => (integer)($version == null ? 0 : $version),
         ];
     }
 }

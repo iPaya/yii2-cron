@@ -4,9 +4,11 @@
 namespace iPaya\Cron\Modules\Admin;
 
 
-class Module extends \yii\base\Module
+use iPaya\Cron\BaseModule;
+
+class Module extends BaseModule
 {
-    public $defaultRoute = 'cron/index';
+    public $defaultRoute = 'default/index';
     public $controllerNamespace = 'iPaya\Cron\Modules\Admin\Controllers';
     /**
      * @var string
@@ -23,7 +25,8 @@ class Module extends \yii\base\Module
     public function menuItems()
     {
         return [
-            ['label' => '计划任务', 'url' => ['cron/index']]
+            ['label' => '计划任务', 'url' => ['default/index']],
+            ['label' => '任务管理', 'url' => ['cron/index']],
         ];
     }
 }
