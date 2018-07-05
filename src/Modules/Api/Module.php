@@ -21,12 +21,9 @@ class Module extends BaseModule
     public function init()
     {
         parent::init();
-        \Yii::$app->set('request', [
-            'class' => 'yii\web\Request',
-            'parsers' => [
-                'application/json' => JsonParser::class,
-            ]
-        ]);
+        \Yii::$app->request->parsers = [
+            'application/json' => JsonParser::class,
+        ];
         \Yii::$app->set('user', [
             'class' => 'yii\web\User',
             'identityClass' => $this->identityClass,
